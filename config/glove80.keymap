@@ -274,11 +274,11 @@
         key-positions = <24 25>;
         bindings = <&kp ESC>;
     };
-    combo_enter {
-        timeout-ms = <50>;
-        key-positions = <25 26>;
-        bindings = <&kp ENTER>;
-    };
+    //combo_enter {
+    //    timeout-ms = <50>;
+    //    key-positions = <25 26>;
+    //    bindings = <&kp ENTER>;
+    //};
 
     combo_at {
         timeout-ms = <50>;
@@ -306,11 +306,11 @@
         key-positions = <36 37>;
         bindings = <&kp TAB>;
     };
-    // combo_repeat {
-    //     timeout-ms = <50>;
-    //     key-positions = <37 38>;
-    //     bindings = <&kp ???>;
-    // };
+    combo_enter {
+        timeout-ms = <50>;
+        key-positions = <37 38>;
+        bindings = <&kp ENTER>;
+    };
 
     combo_grave {
         timeout-ms = <50>;
@@ -383,7 +383,11 @@
         bindings = <&kp AMPS>;
     };
 
-    // Missing second row combos
+    combo_enter_2 {
+        timeout-ms = <50>;
+        key-positions = <41 42>;
+        bindings = <&kp ENTER>;
+    };
 
     combo_underscore {
         timeout-ms = <50>;
