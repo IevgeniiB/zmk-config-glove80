@@ -264,8 +264,8 @@
 
 
 #define COMBO_REQUIRE_PRIOR_IDLE_MS 150
-#define COMBO_TERM_FAST 50
-#define COMBO_TERM_SLOW 70
+#define COMBO_TERM_FAST 30
+#define COMBO_TERM_SLOW 80
 
 #define ZMK_COMBO(name, combo_bindings, keypos, combo_layers, combo_timeout) \
     / { \
@@ -282,7 +282,7 @@
     };
 
 ZMK_COMBO(esc       , &kp ESC       , POS_LH_C4R3 POS_LH_C3R3, LAYER_Base LAYER_Training, COMBO_TERM_FAST)
-ZMK_COMBO(bspc      , &kp BSPC      , POS_LH_C3R3 POS_RH_C2R3, LAYER_Base LAYER_Training, COMBO_TERM_FAST)
+ZMK_COMBO(bspc      , &kp BSPC      , POS_LH_C3R3 POS_LH_C2R3, LAYER_Base LAYER_Training, COMBO_TERM_FAST)
 
 ZMK_COMBO(at        , &kp AT        , POS_LH_C4R3 POS_LH_C4R4, LAYER_Base LAYER_Training, COMBO_TERM_SLOW)
 ZMK_COMBO(pound     , &kp POUND     , POS_LH_C3R3 POS_LH_C3R4, LAYER_Base LAYER_Training, COMBO_TERM_SLOW)
