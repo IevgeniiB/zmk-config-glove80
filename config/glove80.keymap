@@ -358,7 +358,7 @@ ZMK_COMBO(pipe      , &kp PIPE      , POS_RH_C4R4 POS_RH_C4R5, LAYER_Base LAYER_
         flavor = "balanced"; \
         tapping-term-ms = <280>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <150>; \
+        require-prior-idle-ms = <210>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \
