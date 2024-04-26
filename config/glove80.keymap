@@ -31,6 +31,10 @@
 #define LAYER_Lower 0
 #endif
 
+/* Extra mods */
+
+#define HYPER(x) LS(LC(LA(LG(x))))
+
 /* Generic macros */
 
 #define ZMK_HELPER_STRINGIFY(x) #x
@@ -291,9 +295,10 @@
 
 /* Combos */
 
-#define COMBO_REQUIRE_PRIOR_IDLE_MS 150
+#define COMBO_REQUIRE_PRIOR_IDLE_MS 120
 #define COMBO_TERM_FAST 50
 #define COMBO_TERM_SLOW 80
+#define COMBO_SAME_FINGER 100
 
 #define ZMK_COMBO(name, combo_bindings, keypos, combo_layers, combo_timeout) \
     / { \
@@ -309,7 +314,7 @@
         }; \
     };
 
-ZMK_COMBO(esc       , &kp ESC       , POS_LH_C4R3 POS_LH_C3R3, LAYER_Base, COMBO_TERM_FAST)
+ZMK_COMBO(esc       , &kp ESC       , POS_LH_C4R3 POS_LH_C3R3, LAYER_Base LAYER_Nav, COMBO_TERM_FAST)
 ZMK_COMBO(bspc      , &kp BSPC      , POS_LH_C3R3 POS_LH_C2R3, LAYER_Base, COMBO_TERM_FAST)
 
 ZMK_COMBO(at        , &kp AT        , POS_LH_C4R3 POS_LH_C4R4, LAYER_Base, COMBO_TERM_SLOW)
@@ -318,7 +323,7 @@ ZMK_COMBO(dollar    , &kp DOLLAR    , POS_LH_C2R3 POS_LH_C2R4, LAYER_Base, COMBO
 ZMK_COMBO(percent   , &kp PERCENT   , POS_LH_C1R3 POS_LH_C1R4, LAYER_Base, COMBO_TERM_SLOW)
 
 ZMK_COMBO(tab       , &kp TAB       , POS_LH_C4R4 POS_LH_C3R4, LAYER_Base, COMBO_TERM_FAST)
-ZMK_COMBO(enter     , &kp ENTER     , POS_LH_C2R4 POS_LH_C1R4, LAYER_Base, COMBO_TERM_FAST)
+ZMK_COMBO(enter     , &kp ENTER     , POS_LH_C2R4 POS_LH_C1R4, LAYER_Base LAYER_Nav, COMBO_SAME_FINGER)
 
 ZMK_COMBO(grave     , &kp GRAVE     , POS_LH_C4R4 POS_LH_C4R5, LAYER_Base, COMBO_TERM_SLOW)
 ZMK_COMBO(backslash , &kp BACKSLASH , POS_LH_C3R4 POS_LH_C3R5, LAYER_Base, COMBO_TERM_SLOW)
@@ -337,12 +342,16 @@ ZMK_COMBO(plus      , &kp PLUS      , POS_RH_C2R3 POS_RH_C2R4, LAYER_Base, COMBO
 ZMK_COMBO(astrk     , &kp ASTRK     , POS_RH_C3R3 POS_RH_C3R4, LAYER_Base, COMBO_TERM_SLOW)
 ZMK_COMBO(amps      , &kp AMPS      , POS_RH_C4R3 POS_RH_C4R4, LAYER_Base, COMBO_TERM_SLOW)
 
-ZMK_COMBO(enter2    , &kp ENTER     , POS_RH_C1R4 POS_RH_C2R4, LAYER_Base, COMBO_TERM_FAST)
+ZMK_COMBO(enter2    , &kp ENTER     , POS_RH_C1R4 POS_RH_C2R4, LAYER_Base, COMBO_SAME_FINGER)
 
 ZMK_COMBO(underscore, &kp UNDERSCORE, POS_RH_C1R4 POS_RH_C1R5, LAYER_Base, COMBO_TERM_SLOW)
 ZMK_COMBO(minus     , &kp MINUS     , POS_RH_C2R4 POS_RH_C2R5, LAYER_Base, COMBO_TERM_SLOW)
 ZMK_COMBO(slash     , &kp SLASH     , POS_RH_C3R4 POS_RH_C3R5, LAYER_Base, COMBO_TERM_SLOW)
 ZMK_COMBO(pipe      , &kp PIPE      , POS_RH_C4R4 POS_RH_C4R5, LAYER_Base, COMBO_TERM_SLOW)
+
+
+ZMK_COMBO(hyper_o   , &kp HYPER(O)  , POS_LH_C2R4 POS_RH_C2R4, LAYER_Base, COMBO_TERM_SLOW)
+ZMK_COMBO(hyper_c   , &kp HYPER(C)  , POS_LH_C3R4 POS_RH_C3R4, LAYER_Base, COMBO_TERM_SLOW)
 
 /* Homerow mods */
 
