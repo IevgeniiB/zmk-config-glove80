@@ -351,7 +351,7 @@ ZMK_COMBO(pipe      , &kp PIPE      , POS_RH_C4R4 POS_RH_C4R5, LAYER_Base, COMBO
 
 
 ZMK_COMBO(hyper_o   , &kp HYPER(O)  , POS_LH_C2R4 POS_RH_C2R4, LAYER_Base, COMBO_TERM_SLOW)
-ZMK_COMBO(hyper_c   , &kp HYPER(C)  , POS_LH_C3R4 POS_RH_C3R4, LAYER_Base, COMBO_TERM_SLOW)
+ZMK_COMBO(hyper_c   , &kp HYPER(S)  , POS_LH_C2R5 POS_RH_C2R5, LAYER_Base, COMBO_TERM_SLOW)
 
 /* Homerow mods */
 
